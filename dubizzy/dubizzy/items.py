@@ -3,6 +3,7 @@
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/items.html
 
+from turtle import screensize
 import scrapy
 from scrapy.loader import ItemLoader
 from itemloaders.processors import MapCompose, TakeFirst
@@ -29,6 +30,13 @@ class DubizzyItem(scrapy.Item):
     location = scrapy.Field(input_processor = MapCompose(remove_tags), output_processor = TakeFirst())
     amenities = scrapy.Field(input_processor = MapCompose(remove_tags), )
 
-    details = scrapy.Field()
+    furnished = scrapy.Field(output_processor = TakeFirst())
+    apartment_for = scrapy.Field(output_processor = TakeFirst())
+    rent_is_paid = scrapy.Field(output_processor = TakeFirst())
+    listed_by = scrapy.Field(output_processor = TakeFirst())
+    posted_on = scrapy.Field(output_processor = TakeFirst())
+    property_reference = scrapy.Field(output_processor = TakeFirst())
+    updated = scrapy.Field(output_processor = TakeFirst())
+    rera_permit_number = scrapy.Field(output_processor = TakeFirst())
 
     # details

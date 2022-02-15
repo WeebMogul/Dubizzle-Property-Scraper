@@ -87,3 +87,9 @@ DOWNLOAD_DELAY = 3
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+# Output file format
+FEED_FORMAT = "csv"
+
+# Name of the output file
+FEED_URI = "ad_properties.csv"
